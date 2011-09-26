@@ -1,0 +1,11 @@
+[dotfiles]
+repository = ~/dotfiles
+ignore = [
+    '.git',
+    '.gitignore',
+    'LICENSE',
+    'README.rdoc',
+    'Rakefile',
+    'gitconfig.erb'
+    ]
+externals = {}

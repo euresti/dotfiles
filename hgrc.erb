@@ -1,0 +1,38 @@
+[extdiff]
+cmd.opendiff = ~/bin/opendiff-w
+
+[auth]
+sonic.prefix = https://sonic.corp.dropbox.com
+sonic.username = <%= print("Your sonic username: "); STDOUT.flush; STDIN.gets.chomp %>
+
+[ui]
+username = <%= print("Your hg username: "); STDOUT.flush; STDIN.gets.chomp %>
+
+[extensions]
+hgext.hgk = 
+hgext.purge = 
+graphlog = 
+eol = 
+record = 
+hgext.extdiff = 
+mq = 
+progress = 
+hgext.mq = 
+bookmarks = 
+fetch = 
+pager = 
+children = 
+color = 
+transplant = 
+mercurial_keyring =
+
+[diff]
+git = 1
+nodates = 1
+
+[pager]
+pager = LESS='FSRX' less
+
+[hgk]
+path = /Library/Python/2.6/site-packages/mercurial-1.6.4-py2.6-macosx-10.6-universal.egg/hgext/hgk.py
+

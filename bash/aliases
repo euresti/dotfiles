@@ -13,3 +13,4 @@ function railsapp {
 
 # misc
 alias reload='. ~/.bash_profile'
+alias fid="ps -ax | grep Finder | grep -v gdb | grep -v grep | awk '{print \$1}' "
