@@ -1,3 +1,11 @@
+;; Make sure this path is in PATH otherwise it won't work on OSX.
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; emacs-for-python settings.
+(load-file "~/.emacs.d/emacs-for-python/epy-init.el")
+(epy-setup-checker "pyflakes %f")
+
 ;; Use my super awesome .emacs.d
 (add-to-list 'load-path "~/.emacs.d")
 
