@@ -1,0 +1,30 @@
+XTerm*font:         9x15
+XTerm*reverseVideo:1
+XTerm*scrollBar:0
+XTerm*geometry: 80x68
+
+rxvt*reverseVideo:1
+rxvt*scrollBar:0
+rxvt*colorMode:                on
+rxvt*dynamicColors:            on
+
+URxvt*font:         9x15
+urxvt*reverseVideo:1
+urxvt*scrollBar:0
+urxvt*colorMode:                on
+urxvt*dynamicColors:            on
+
+UXTerm*font:         9x15
+UXTerm*reverseVideo:1
+UXTerm*scrollBar:0
+UXTerm*colorMode:                on
+UXTerm*dynamicColors:            on
+
+emacs*scrollBar:false
+emacs*cursorColor:green
+emacs*Background:black
+emacs*Foreground:white
+Emacs.menuBar: off
+Emacs.verticalScrollBars: off
+Emacs.toolBar: off
+Emacs*font: 9x15
