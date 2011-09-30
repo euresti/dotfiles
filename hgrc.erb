@@ -1,5 +1,19 @@
+[review]
+max_diff = -1
+domain = dropbox.com
+
+[smtp]
+host = tarak.corp.getdropbox.com
+
+[review:subscribers]
+*client* = team-client@dropbox.com
+*server* = server-reviews@dropbox.com
+
 [extdiff]
 cmd.opendiff = ~/bin/opendiff-w
+cmd.meld = bcompare
+opts.meld = -expandall -solo -lro
+cmd.meld2 = meld
 
 [auth]
 sonic.prefix = https://sonic.corp.dropbox.com
@@ -7,24 +21,37 @@ sonic.username = <%= print("Your sonic username: "); STDOUT.flush; STDIN.gets.ch
 
 [ui]
 username = <%= print("Your hg username: "); STDOUT.flush; STDIN.gets.chomp %>
+merge = bcomp
+
+[merge-tools]
+bcomp.executable = bcompare
+bcomp.priority = 1
+bcomp.args = $local $other $base $output
+bcomp.premerge = True
+bcomp.gui = True
+
+[reviewboard]
+user = david
+server = http://sonic.corp.dropbox.com/reviews
 
 [extensions]
-hgext.hgk = 
-hgext.purge = 
-graphlog = 
-eol = 
-record = 
-hgext.extdiff = 
-mq = 
-progress = 
-hgext.mq = 
-bookmarks = 
-fetch = 
-pager = 
-children = 
-color = 
-transplant = 
+children =
+color =
+eol =
+extdiff =
+fetch =
+graphlog =
+hgk =
 mercurial_keyring =
+mq =
+pager =
+progress =
+prompt = ~/tools/hg-prompt/prompt.py
+purge =
+record =
+review = ~/src/hgreview/review.py
+reviewboard = ~/bin/reviewboard
+transplant =
 
 [diff]
 git = 1
@@ -36,3 +63,5 @@ pager = LESS='FSRX' less
 [hgk]
 path = /Library/Python/2.6/site-packages/mercurial-1.6.4-py2.6-macosx-10.6-universal.egg/hgext/hgk.py
 
+[eol]
+only-consistent=False

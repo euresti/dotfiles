@@ -6,6 +6,7 @@ ignore = [
     'LICENSE',
     'README.rdoc',
     'Rakefile',
-    'gitconfig.erb'
+    'gitconfig.erb',
+    'hgrc.erb',
     ]
 externals = {}
