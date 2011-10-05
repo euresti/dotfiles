@@ -22,3 +22,4 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+alias arrakis='rdesktop -g 90% -u admin -p - arrakis'
