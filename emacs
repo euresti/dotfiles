@@ -59,4 +59,4 @@
 (prefer-coding-system 'utf-8)
 
 (load-file "~/.emacs.d/emacs-for-python/epy-init.el")
-(epy-setup-checker "pyflakes %f")
+(epy-setup-checker "pycheckers %f")
